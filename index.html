@@ -1,16 +1,75 @@
-<html lang="pl"><head>
+<!DOCTYPE html>
+<html lang="pl">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DJ Ramzes - Profesjonalne Usługi DJ-skie | Imprezy, Wesela, Eventy</title>
-    <meta name="description" content="DJ Ramzes - Twój profesjonalny DJ na każdą okazję. Wesela, imprezy firmowe, urodziny. Sprawdź ofertę i zarezerwuj termin!">
-    <meta name="keywords" content="DJ, DJ Ramzes, usługi DJ, wesele, impreza firmowa, event, muzyka, oprawa muzyczna">
-    <meta name="author" content="DJ Ramzes">
-    <meta property="og:title" content="DJ Ramzes - Profesjonalne Usługi DJ-skie">
-    <meta property="og:description" content="Zapewniam niezapomnianą oprawę muzyczną na Twojej imprezie. Sprawdź moją ofertę!">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- SEO Meta Tags -->
+    <title>DJ Ramzes - Najlepszy DJ na Wesele w Warszawie | Imprezy, Eventy 2024</title>
+    <meta name="description" content="DJ Ramzes - profesjonalny DJ z Warszawy z 10-letnim doświadczeniem. Oprawa muzyczna wesel, imprez firmowych, studniówek. ✓ 500+ zadowolonych klientów ✓ Konkurencyjne ceny od 1200 zł">
+    <meta name="keywords" content="DJ Ramzes, DJ na wesele Warszawa, DJ Mazowsze, oprawa muzyczna wesela, DJ imprezy firmowe, DJ eventy, profesjonalny DJ Warszawa, muzyka na wesele, DJ na osiemnastkę, DJ na studniówkę, najlepszy DJ Warszawa">
+    <meta name="author" content="DJ Ramzes - Profesjonalne Usługi DJ">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="pl">
+    <meta name="geo.region" content="PL-MZ">
+    <meta name="geo.placename" content="Warszawa">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://djramzes.pl/">
+    <meta property="og:title" content="DJ Ramzes - Profesjonalny DJ na Wesele | Warszawa">
+    <meta property="og:description" content="Zapewniam niezapomnianą oprawę muzyczną wesel i eventów. Ponad 500 zadowolonych klientów. Sprawdź wolne terminy!">
+    <meta property="og:image" content="https://djramzes.pl/images/dj-ramzes-og.jpg">
+    <meta property="og:locale" content="pl_PL">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://djramzes.pl/">
+    <meta property="twitter:title" content="DJ Ramzes - Profesjonalny DJ na Wesele | Warszawa">
+    <meta property="twitter:description" content="Zapewniam niezapomnianą oprawę muzyczną wesel i eventów. Sprawdź wolne terminy!">
+    <meta property="twitter:image" content="https://djramzes.pl/images/dj-ramzes-og.jpg">
+    
+    <!-- Canonical URL -->
     <link rel="canonical" href="https://djramzes.pl">
     
+    <!-- Preconnect to external domains -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "DJ Ramzes",
+        "description": "Profesjonalne usługi DJ na wesela, imprezy firmowe i eventy",
+        "url": "https://djramzes.pl",
+        "telephone": "+48123456789",
+        "email": "kontakt@djramzes.pl",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Warszawa",
+            "addressRegion": "Mazowieckie",
+            "addressCountry": "PL"
+        },
+        "priceRange": "1200-5000 PLN",
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+            "opens": "10:00",
+            "closes": "20:00"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "127"
+        }
+    }
+    </script>
+    
     <style>
+        /* Critical CSS - Above the fold */
         * {
             margin: 0;
             padding: 0;
@@ -18,29 +77,36 @@
         }
 
         :root {
-            --primary-color: #ff0080;
-            --secondary-color: #00ffff;
-            --dark-bg: #0a0a0a;
-            --darker-bg: #050505;
+            --primary-yellow: #FFD700;
+            --secondary-yellow: #FFC107;
+            --accent-yellow: #FFEB3B;
+            --dark-bg: #000000;
+            --darker-bg: #0a0a0a;
             --text-light: #ffffff;
-            --text-gray: #b0b0b0;
-            --accent-gradient: linear-gradient(135deg, #ff0080, #00ffff);
+            --text-gray: #cccccc;
+            --text-dark: #333333;
+            --accent-gradient: linear-gradient(135deg, #FFD700, #FFC107);
+            --shadow-yellow: 0 0 30px rgba(255, 215, 0, 0.5);
         }
 
+        /* Performance optimizations */
         html {
             scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             background-color: var(--dark-bg);
             color: var(--text-light);
             line-height: 1.6;
             overflow-x: hidden;
+            position: relative;
         }
 
-        /* Loader */
-        .loader {
+        /* Preloader */
+        .preloader {
             position: fixed;
             top: 0;
             left: 0;
@@ -54,40 +120,40 @@
             transition: opacity 0.5s, visibility 0.5s;
         }
 
-        .loader.hidden {
+        .preloader.fade-out {
             opacity: 0;
             visibility: hidden;
         }
 
-        .loader-inner {
-            width: 60px;
-            height: 60px;
+        .loader {
+            width: 80px;
+            height: 80px;
             position: relative;
         }
 
-        .loader-inner div {
+        .loader-circle {
             position: absolute;
             width: 100%;
             height: 100%;
+            border: 4px solid transparent;
+            border-top-color: var(--primary-yellow);
             border-radius: 50%;
-            background: var(--accent-gradient);
-            opacity: 0.6;
-            animation: ripple 2s ease-out infinite;
+            animation: spin 1s linear infinite;
         }
 
-        .loader-inner div:nth-child(2) {
-            animation-delay: -0.5s;
+        .loader-circle:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            top: 10px;
+            left: 10px;
+            border-top-color: var(--secondary-yellow);
+            animation-duration: 0.8s;
+            animation-direction: reverse;
         }
 
-        @keyframes ripple {
-            0% {
-                transform: scale(0);
-                opacity: 1;
-            }
-            100% {
-                transform: scale(1);
-                opacity: 0;
-            }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
 
         /* Navigation */
@@ -95,20 +161,22 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
             z-index: 1000;
             transition: all 0.3s ease;
-            padding: 1rem 0;
+            padding: 1.2rem 0;
         }
 
         nav.scrolled {
-            background: rgba(5, 5, 5, 0.98);
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.98);
+            box-shadow: 0 5px 20px rgba(255, 215, 0, 0.15);
+            padding: 0.8rem 0;
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -118,127 +186,137 @@
 
         .logo {
             font-size: 2rem;
-            font-weight: bold;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            color: var(--primary-yellow);
             text-decoration: none;
-            animation: pulse 2s infinite;
+            letter-spacing: 2px;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        @keyframes pulse {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.05); }
+        .logo:hover {
+            transform: scale(1.05);
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.8);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
         }
 
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 2rem;
+            gap: 2.5rem;
+            align-items: center;
         }
 
         .nav-link {
             color: var(--text-light);
             text-decoration: none;
+            font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
             padding: 0.5rem 0;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
         .nav-link::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -5px;
             left: 0;
             width: 0;
-            height: 2px;
+            height: 3px;
             background: var(--accent-gradient);
             transition: width 0.3s ease;
+            border-radius: 2px;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-yellow);
         }
 
         .nav-link:hover::after {
             width: 100%;
         }
 
-        .nav-link:hover {
-            color: var(--primary-color);
+        .nav-cta {
+            background: var(--accent-gradient);
+            color: var(--dark-bg);
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .nav-cta:hover {
             transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 215, 0, 0.5);
         }
 
         .hamburger {
             display: none;
             flex-direction: column;
             cursor: pointer;
+            gap: 5px;
+            padding: 5px;
         }
 
         .hamburger span {
-            width: 25px;
+            width: 30px;
             height: 3px;
-            background: var(--text-light);
-            margin: 3px 0;
-            transition: 0.3s;
+            background: var(--primary-yellow);
+            transition: all 0.3s ease;
+            border-radius: 2px;
         }
 
-        /* Hero Section */
+        /* Hero Section with Parallax */
         .hero {
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.6)),
+                        url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?q=80&w=2070') center/cover fixed;
+            padding: 100px 2rem 80px;
             overflow: hidden;
-            padding-top: 80px;
         }
 
-        .hero-bg {
+        .hero::before {
+            content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
-                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%230a0a0a" width="1200" height="800"/><circle cx="600" cy="400" r="300" fill="none" stroke="%23ff0080" stroke-width="2" opacity="0.3"/><circle cx="600" cy="400" r="200" fill="none" stroke="%2300ffff" stroke-width="2" opacity="0.3"/></svg>');
-            background-size: cover;
-            background-position: center;
-            z-index: -2;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 50%, rgba(255, 193, 7, 0.1) 0%, transparent 50%);
+            animation: pulse-bg 4s ease-in-out infinite;
         }
 
-        .particles {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
-
-        .particle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background: var(--primary-color);
-            border-radius: 50%;
-            animation: float 15s infinite linear;
-        }
-
-        @keyframes float {
-            from {
-                transform: translateY(100vh) translateX(0);
-                opacity: 0;
-            }
-            10% {
-                opacity: 1;
-            }
-            90% {
-                opacity: 1;
-            }
-            to {
-                transform: translateY(-100vh) translateX(100px);
-                opacity: 0;
-            }
+        @keyframes pulse-bg {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
         }
 
         .hero-content {
             text-align: center;
             z-index: 1;
+            max-width: 1000px;
             animation: fadeInUp 1s ease;
         }
 
@@ -253,43 +331,91 @@
             }
         }
 
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: glow 2s ease-in-out infinite alternate;
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 215, 0, 0.2);
+            color: var(--primary-yellow);
+            padding: 0.7rem 2rem;
+            border-radius: 30px;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            font-size: 1rem;
+            border: 2px solid var(--primary-yellow);
+            animation: glow 2s ease-in-out infinite;
         }
 
         @keyframes glow {
-            from {
-                text-shadow: 0 0 10px rgba(255, 0, 128, 0.5);
-            }
-            to {
-                text-shadow: 0 0 20px rgba(255, 0, 128, 0.8), 0 0 30px rgba(0, 255, 255, 0.5);
-            }
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.5); }
+            50% { box-shadow: 0 0 30px rgba(255, 215, 0, 0.8); }
+        }
+
+        .hero h1 {
+            font-size: clamp(3rem, 10vw, 6rem);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            color: var(--text-light);
+            line-height: 1.1;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 span {
+            color: transparent;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            display: inline-block;
+            animation: shine 3s linear infinite;
+        }
+
+        @keyframes shine {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(30deg); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+            color: var(--primary-yellow);
+            font-weight: 300;
+            letter-spacing: 3px;
         }
 
         .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: clamp(1.1rem, 3vw, 1.4rem);
+            margin-bottom: 3rem;
             color: var(--text-gray);
+            font-weight: 400;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.8;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .cta-button {
-            display: inline-block;
-            padding: 1rem 3rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1.2rem 3rem;
             background: var(--accent-gradient);
-            color: var(--text-light);
+            color: var(--dark-bg);
             text-decoration: none;
             border-radius: 50px;
-            font-weight: bold;
+            font-weight: 700;
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 1rem;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+            position: relative;
+            overflow: hidden;
         }
 
         .cta-button::before {
@@ -311,134 +437,497 @@
         }
 
         .cta-button:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(255, 0, 128, 0.5);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
+        }
+
+        .cta-button-outline {
+            background: transparent;
+            border: 2px solid var(--primary-yellow);
+            color: var(--primary-yellow);
+            box-shadow: none;
+        }
+
+        .cta-button-outline:hover {
+            background: var(--accent-gradient);
+            color: var(--dark-bg);
+            border-color: transparent;
+        }
+
+        /* Floating elements */
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+        }
+
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            animation: float-shape 20s infinite linear;
+        }
+
+        .shape:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-yellow);
+            border-radius: 50%;
+            top: 20%;
+            left: 10%;
+            animation-duration: 25s;
+        }
+
+        .shape:nth-child(2) {
+            width: 60px;
+            height: 60px;
+            background: var(--secondary-yellow);
+            top: 60%;
+            right: 10%;
+            animation-duration: 20s;
+            animation-delay: -5s;
+        }
+
+        .shape:nth-child(3) {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            border: 3px solid var(--primary-yellow);
+            border-radius: 50%;
+            bottom: 20%;
+            left: 30%;
+            animation-duration: 30s;
+            animation-delay: -10s;
+        }
+
+        @keyframes float-shape {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
+            100% {
+                transform: translateY(0) rotate(360deg);
+            }
         }
 
         /* Section Styles */
         section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 3rem;
-            text-align: center;
-            margin-bottom: 3rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            padding: 100px 0;
             position: relative;
         }
 
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background: var(--accent-gradient);
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
         }
 
-        /* Services */
-        .services-grid {
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .section-label {
+            display: inline-block;
+            color: var(--primary-yellow);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            color: var(--text-light);
+            text-transform: uppercase;
+            line-height: 1.2;
+        }
+
+        .section-title span {
+            color: transparent;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-gray);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* About Section with Timeline */
+        .about {
+            background: var(--darker-bg);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            animation: rotate-slow 30s linear infinite;
+        }
+
+        @keyframes rotate-slow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .about-content {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-text h3 {
+            font-size: 2.5rem;
+            color: var(--primary-yellow);
+            margin-bottom: 2rem;
+            font-weight: 800;
+        }
+
+        .about-text p {
+            color: var(--text-gray);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .about-features {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
             margin-top: 3rem;
         }
 
-        .service-card {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
+        .feature-box {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
             padding: 2rem;
-            border-radius: 20px;
+            border-radius: 15px;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
         }
 
+        .feature-box::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 15px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            z-index: -1;
+        }
+
+        .feature-box:hover::before {
+            opacity: 1;
+        }
+
+        .feature-box:hover {
+            transform: translateY(-5px);
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .feature-box h4 {
+            color: var(--primary-yellow);
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .feature-box p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        .about-image {
+            position: relative;
+            height: 600px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+            padding: 3rem 2rem;
+            color: var(--text-light);
+        }
+
+        .experience-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 1rem;
+            background: var(--accent-gradient);
+            color: var(--dark-bg);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+        }
+
+        /* Stats Counter */
+        .stats {
+            background: var(--dark-bg);
+            padding: 80px 0;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+            border-bottom: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 3rem;
+        }
+
+        .stat-item {
+            text-align: center;
+            position: relative;
+        }
+
+        .stat-item::after {
+            content: '';
+            position: absolute;
+            right: -1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60px;
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .stat-item:last-child::after {
+            display: none;
+        }
+
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary-yellow);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.3rem;
+        }
+
+        .stat-number span {
+            font-size: 2rem;
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        /* Services Grid Modern */
+        .services {
+            background: linear-gradient(180deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2.5rem;
+            margin-top: 5rem;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            padding: 3rem;
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
         .service-card::before {
             content: '';
             position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: var(--accent-gradient);
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, transparent 100%);
             opacity: 0;
-            transform: rotate(45deg);
-            transition: opacity 0.3s ease;
+            transition: opacity 0.4s ease;
         }
 
         .service-card:hover::before {
-            opacity: 0.1;
+            opacity: 1;
         }
 
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(255, 0, 128, 0.3);
-            border-color: var(--primary-color);
+            border-color: var(--primary-yellow);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
         }
 
         .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            display: block;
+            filter: grayscale(0);
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
         }
 
         .service-card h3 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 1rem;
+            color: var(--primary-yellow);
+            font-weight: 700;
         }
 
         .service-card p {
             color: var(--text-gray);
             line-height: 1.8;
+            margin-bottom: 2rem;
+            flex-grow: 1;
         }
 
-        .price {
-            display: block;
-            margin-top: 1rem;
-            font-size: 1.2rem;
-            color: var(--secondary-color);
+        .service-features {
+            list-style: none;
+            margin-bottom: 2rem;
+        }
+
+        .service-features li {
+            padding: 0.7rem 0;
+            padding-left: 2rem;
+            position: relative;
+            color: var(--text-gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .service-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-yellow);
             font-weight: bold;
+            font-size: 1.2rem;
         }
 
-        /* Portfolio */
+        .service-price {
+            display: flex;
+            align-items: baseline;
+            gap: 0.5rem;
+            margin-top: auto;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        .price-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .price-amount {
+            font-size: 2rem;
+            color: var(--primary-yellow);
+            font-weight: 900;
+        }
+
+        .price-currency {
+            color: var(--text-gray);
+            font-size: 1.2rem;
+        }
+
+        /* Portfolio Masonry */
+        .portfolio {
+            background: var(--darker-bg);
+            position: relative;
+        }
+
         .portfolio-filters {
             display: flex;
             justify-content: center;
             gap: 1rem;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             flex-wrap: wrap;
         }
 
         .filter-btn {
-            padding: 0.5rem 1.5rem;
-            background: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 0.8rem 2rem;
+            background: transparent;
+            border: 2px solid rgba(255, 215, 0, 0.3);
             color: var(--text-light);
             cursor: pointer;
-            border-radius: 25px;
+            border-radius: 50px;
             transition: all 0.3s ease;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
         }
 
         .filter-btn.active,
         .filter-btn:hover {
             background: var(--accent-gradient);
+            color: var(--dark-bg);
             border-color: transparent;
-            transform: scale(1.05);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
         }
 
         .portfolio-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
         }
 
@@ -446,202 +935,545 @@
             position: relative;
             overflow: hidden;
             border-radius: 15px;
-            height: 300px;
+            height: 400px;
             cursor: pointer;
-            transition: all 0.3s ease;
-            background: rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
 
         .portfolio-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 20px 40px rgba(255, 0, 128, 0.4);
+            transform: scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.3);
+        }
+
+        .portfolio-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .portfolio-item:hover .portfolio-image {
+            transform: scale(1.1);
         }
 
         .portfolio-overlay {
             position: absolute;
-            top: 0;
+            bottom: 0;
             left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(to bottom, transparent, rgba(10, 10, 10, 0.9));
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            padding: 2rem;
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            right: 0;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.95), transparent);
+            padding: 3rem 2rem 2rem;
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
         }
 
         .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
+            transform: translateY(0);
         }
 
         .portfolio-title {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             margin-bottom: 0.5rem;
+            color: var(--text-light);
+            font-weight: 700;
         }
 
         .portfolio-category {
-            color: var(--secondary-color);
+            color: var(--primary-yellow);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
         }
 
-        /* Testimonials */
-        .testimonials-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        .portfolio-details {
+            color: var(--text-gray);
+            margin-top: 1rem;
+            line-height: 1.6;
+        }
+
+        .portfolio-stats {
+            display: flex;
             gap: 2rem;
-            margin-top: 3rem;
+            margin-top: 1rem;
+        }
+
+        .portfolio-stat {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Process Timeline */
+        .process {
+            background: var(--dark-bg);
+            position: relative;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 1000px;
+            margin: 5rem auto 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: rgba(255, 215, 0, 0.2);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 2.5rem;
+            border-radius: 15px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .timeline-content:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.2);
+        }
+
+        .timeline-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 60px;
+            background: var(--accent-gradient);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--dark-bg);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
+            z-index: 1;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* Testimonials Carousel */
+        .testimonials {
+            background: linear-gradient(180deg, var(--darker-bg) 0%, var(--dark-bg) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials::before {
+            content: '❝';
+            position: absolute;
+            top: 10%;
+            left: 5%;
+            font-size: 20rem;
+            color: rgba(255, 215, 0, 0.05);
+            font-family: Georgia, serif;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
         }
 
         .testimonial-card {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
+            background: rgba(255, 255, 255, 0.02);
+            padding: 3rem;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.1);
             position: relative;
             transition: all 0.3s ease;
         }
 
         .testimonial-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(255, 0, 128, 0.2);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15);
+            border-color: rgba(255, 215, 0, 0.3);
         }
 
-        .quote-icon {
-            font-size: 3rem;
-            color: var(--primary-color);
-            opacity: 0.3;
-            position: absolute;
-            top: 1rem;
-            right: 1rem;
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .testimonial-avatar {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            background: var(--accent-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--dark-bg);
+        }
+
+        .testimonial-info {
+            flex: 1;
+        }
+
+        .testimonial-author {
+            font-weight: 700;
+            color: var(--primary-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .testimonial-event {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        .stars {
+            color: var(--primary-yellow);
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
         }
 
         .testimonial-text {
+            color: var(--text-gray);
+            line-height: 1.8;
+            font-size: 1.1rem;
+            position: relative;
             font-style: italic;
+        }
+
+        .testimonial-date {
+            display: block;
+            text-align: right;
+            color: rgba(255, 215, 0, 0.5);
+            font-size: 0.9rem;
+            margin-top: 1.5rem;
+        }
+
+        /* FAQ Accordion Modern */
+        .faq {
+            background: var(--darker-bg);
+        }
+
+        .faq-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 3rem;
+            margin-top: 5rem;
+        }
+
+        .faq-column h3 {
+            color: var(--primary-yellow);
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .faq-item {
             margin-bottom: 1.5rem;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(255, 215, 0, 0.3);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 1.5rem 2rem;
+            background: rgba(255, 215, 0, 0.02);
+            border: none;
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 215, 0, 0.05);
+        }
+
+        .faq-icon {
+            font-size: 1.5rem;
+            color: var(--primary-yellow);
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.3s ease;
+            padding: 0 2rem;
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+            padding: 1.5rem 2rem;
+        }
+
+        .faq-answer p {
             color: var(--text-gray);
             line-height: 1.8;
         }
 
-        .testimonial-author {
-            font-weight: bold;
-            color: var(--secondary-color);
+        /* Contact Section Modern */
+        .contact {
+            background: linear-gradient(180deg, var(--dark-bg) 0%, var(--darker-bg) 100%);
+            position: relative;
         }
 
-        .testimonial-event {
-            font-size: 0.9rem;
-            color: var(--text-gray);
-        }
-
-        .stars {
-            color: #ffd700;
-            margin-bottom: 1rem;
-            font-size: 1.2rem;
-        }
-
-        /* Contact */
-        .contact-container {
+        .contact-wrapper {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 3rem;
-            margin-top: 3rem;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            margin-top: 5rem;
         }
 
-        .contact-form {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 2rem;
+        .contact-form-wrapper {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 3rem;
             border-radius: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .form-header {
+            margin-bottom: 2rem;
+        }
+
+        .form-header h3 {
+            font-size: 2rem;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .form-header p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
         }
 
         .form-group {
             margin-bottom: 1.5rem;
         }
 
+        .form-group.full-width {
+            grid-column: 1 / -1;
+        }
+
         .form-group label {
             display: block;
-            margin-bottom: 0.5rem;
-            color: var(--secondary-color);
-        }
-
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 10px;
-            color: var(--text-light);
-            transition: all 0.3s ease;
-        }
-
-        .form-group input:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: var(--primary-color);
-            box-shadow: 0 0 10px rgba(255, 0, 128, 0.3);
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 120px;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 1rem;
-            background: var(--accent-gradient);
-            border: none;
-            border-radius: 50px;
-            color: var(--text-light);
-            font-weight: bold;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            margin-bottom: 0.7rem;
+            color: var(--primary-yellow);
+            font-weight: 600;
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .submit-btn:hover {
-            transform: scale(1.02);
-            box-shadow: 0 10px 30px rgba(255, 0, 128, 0.5);
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 215, 0, 0.2);
+            border-radius: 10px;
+            color: var(--text-light);
+            transition: all 0.3s ease;
+            font-family: inherit;
+            font-size: 1rem;
         }
 
-        .contact-info {
-            padding: 2rem;
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--primary-yellow);
+            background: rgba(255, 255, 255, 0.08);
+            box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
         }
 
-        .info-item {
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 1.5rem;
+            background: var(--accent-gradient);
+            border: none;
+            border-radius: 10px;
+            color: var(--dark-bg);
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
             display: flex;
             align-items: center;
-            margin-bottom: 2rem;
-            transition: transform 0.3s ease;
+            justify-content: center;
+            gap: 1rem;
         }
 
-        .info-item:hover {
-            transform: translateX(10px);
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(255, 215, 0, 0.5);
         }
 
-        .info-icon {
+        .contact-info-wrapper {
+            padding: 3rem 0;
+        }
+
+        .contact-info-header {
+            margin-bottom: 3rem;
+        }
+
+        .contact-info-header h3 {
             font-size: 2rem;
-            margin-right: 1rem;
-            background: var(--accent-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
         }
 
-        .info-text h3 {
-            margin-bottom: 0.5rem;
-            color: var(--secondary-color);
-        }
-
-        .info-text p {
+        .contact-info-header p {
             color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .contact-cards {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .contact-card {
+            background: rgba(255, 215, 0, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            padding: 2rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .contact-card:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateX(10px);
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            color: var(--primary-yellow);
+            flex-shrink: 0;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 215, 0, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-content h4 {
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .contact-content p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        .contact-content a {
+            color: var(--primary-yellow);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-content a:hover {
+            color: var(--secondary-yellow);
+        }
+
+        .social-links-section {
+            margin-top: 3rem;
+            text-align: center;
+        }
+
+        .social-links-section h4 {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
         }
 
         .social-links {
             display: flex;
             gap: 1rem;
-            margin-top: 2rem;
+            justify-content: center;
         }
 
         .social-link {
@@ -650,100 +1482,497 @@
             justify-content: center;
             width: 50px;
             height: 50px;
-            background: rgba(255, 255, 255, 0.1);
+            background: rgba(255, 215, 0, 0.1);
+            border: 2px solid rgba(255, 215, 0, 0.3);
             border-radius: 50%;
-            color: var(--text-light);
+            color: var(--primary-yellow);
             text-decoration: none;
             transition: all 0.3s ease;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
         }
 
         .social-link:hover {
             background: var(--accent-gradient);
-            transform: scale(1.1) rotate(360deg);
+            color: var(--dark-bg);
+            transform: translateY(-5px) rotate(360deg);
+            border-color: transparent;
+            box-shadow: 0 10px 30px rgba(255, 215, 0, 0.5);
         }
 
-        /* Footer */
+        /* CTA Section */
+        .cta-section {
+            background: var(--accent-gradient);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: rotate-slow 20s linear infinite;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            color: var(--dark-bg);
+            margin-bottom: 1.5rem;
+            font-weight: 900;
+            text-transform: uppercase;
+        }
+
+        .cta-content p {
+            font-size: 1.3rem;
+            color: rgba(0, 0, 0, 0.8);
+            margin-bottom: 2.5rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button-dark {
+            background: var(--dark-bg);
+            color: var(--primary-yellow);
+            padding: 1.2rem 3rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .cta-button-dark:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Footer Modern */
         footer {
             background: var(--darker-bg);
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 80px 0 30px;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
         }
 
-        footer p {
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand {
+            max-width: 400px;
+        }
+
+        .footer-logo {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: var(--primary-yellow);
+            margin-bottom: 1.5rem;
+            display: block;
+            text-decoration: none;
+        }
+
+        .footer-brand p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .footer-newsletter {
+            background: rgba(255, 215, 0, 0.05);
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        .footer-newsletter h4 {
+            color: var(--primary-yellow);
+            margin-bottom: 1rem;
+        }
+
+        .newsletter-form {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 0.8rem 1.2rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 5px;
+            color: var(--text-light);
+        }
+
+        .newsletter-form button {
+            padding: 0.8rem 1.5rem;
+            background: var(--accent-gradient);
+            border: none;
+            border-radius: 5px;
+            color: var(--dark-bg);
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .newsletter-form button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+        }
+
+        .footer-section h3 {
+            color: var(--primary-yellow);
+            margin-bottom: 1.5rem;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section li {
+            margin-bottom: 1rem;
+        }
+
+        .footer-section a {
+            color: var(--text-gray);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .footer-section a:hover {
+            color: var(--primary-yellow);
+            transform: translateX(5px);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 3rem;
+            border-top: 1px solid rgba(255, 215, 0, 0.1);
             color: var(--text-gray);
         }
 
-        /* Responsive */
+        .footer-bottom p {
+            margin-bottom: 1rem;
+        }
+
+        .footer-bottom a {
+            color: var(--primary-yellow);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: var(--secondary-yellow);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+            }
+
+            .stat-item::after {
+                display: none;
+            }
+
+            .stat-item:nth-child(2)::after {
+                display: block;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .about-features {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-item,
+            .timeline-item:nth-child(even) {
+                flex-direction: column;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .timeline::before {
+                left: 30px;
+            }
+
+            .timeline-icon {
+                left: 30px;
+            }
+
+            .contact-wrapper {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .footer-content {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .footer-brand {
+                grid-column: 1 / -1;
+            }
+        }
+
         @media (max-width: 768px) {
             .nav-menu {
                 position: fixed;
                 left: -100%;
                 top: 70px;
                 flex-direction: column;
-                background-color: rgba(10, 10, 10, 0.98);
+                background-color: rgba(0, 0, 0, 0.98);
                 width: 100%;
                 text-align: center;
                 transition: 0.3s;
                 padding: 2rem 0;
+                border-top: 1px solid rgba(255, 215, 0, 0.1);
+                gap: 1.5rem;
             }
 
             .nav-menu.active {
                 left: 0;
             }
 
+            .nav-cta {
+                margin-top: 1rem;
+            }
+
             .hamburger {
                 display: flex;
             }
 
+            .hamburger.active span:nth-child(1) {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            .hamburger.active span:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active span:nth-child(3) {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+
             .hero h1 {
+                font-size: 3rem;
+            }
+
+            .hero-subtitle {
+                font-size: 1.5rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .cta-button {
+                width: 100%;
+                max-width: 300px;
+                text-align: center;
+            }
+
+            .section-title {
                 font-size: 2.5rem;
             }
 
-            .hero p {
-                font-size: 1.2rem;
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .faq-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-newsletter {
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .timeline::before {
+                display: none;
+            }
+
+            .timeline-icon {
+                position: relative;
+                left: 0;
+                margin: 0 auto 2rem;
+                transform: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.5rem;
             }
 
             .section-title {
                 font-size: 2rem;
             }
+
+            .stat-number {
+                font-size: 2.5rem;
+            }
+
+            .portfolio-item {
+                height: 300px;
+            }
+
+            .cta-button {
+                padding: 1rem 2rem;
+                font-size: 0.9rem;
+            }
         }
 
-        /* Animation on Scroll */
+        /* Animations */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s ease;
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
 
         .fade-in.visible {
             opacity: 1;
             transform: translateY(0);
         }
+
+        .fade-in-left {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-left.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        .fade-in-right {
+            opacity: 0;
+            transform: translateX(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-in-right.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Performance optimizations */
+        img {
+            loading: lazy;
+            decoding: async;
+        }
+
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Print styles */
+        @media print {
+            body {
+                background: white;
+                color: black;
+            }
+
+            nav, .hero, .cta-section, footer {
+                display: none;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- Loader -->
-    <div class="loader hidden">
-        <div class="loader-inner">
-            <div></div>
-            <div></div>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-circle"></div>
         </div>
     </div>
 
     <!-- Navigation -->
-    <nav id="navbar" class="scrolled">
+    <nav id="navbar">
         <div class="nav-container">
-            <a href="#home" class="logo">DJ RAMZES</a>
+            <a href="#home" class="logo">
+                <span class="logo-icon">🎵</span>
+                DJ RAMZES
+            </a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link">Start</a></li>
-                <li><a href="#services" class="nav-link">Oferta</a></li>
+                <li><a href="#about" class="nav-link">O mnie</a></li>
+                <li><a href="#services" class="nav-link">Usługi</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#process" class="nav-link">Proces</a></li>
                 <li><a href="#testimonials" class="nav-link">Opinie</a></li>
-                <li><a href="#contact" class="nav-link">Kontakt</a></li>
+                <li><a href="#faq" class="nav-link">FAQ</a></li>
+                <li><a href="#contact" class="nav-cta">Kontakt</a></li>
             </ul>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -753,192 +1982,643 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
-        <div class="hero-bg"></div>
-        <div class="particles"><div class="particle" style="left: 47.3252%; animation-delay: 4.0066s; animation-duration: 14.9894s;"></div><div class="particle" style="left: 79.3685%; animation-delay: 6.5925s; animation-duration: 15.4426s;"></div><div class="particle" style="left: 71.3412%; animation-delay: 13.8387s; animation-duration: 15.6812s;"></div><div class="particle" style="left: 70.9883%; animation-delay: 11.4012s; animation-duration: 19.9621s;"></div><div class="particle" style="left: 85.7566%; animation-delay: 14.3864s; animation-duration: 11.0469s;"></div><div class="particle" style="left: 1.49752%; animation-delay: 11.7762s; animation-duration: 18.1307s;"></div><div class="particle" style="left: 86.2435%; animation-delay: 11.5437s; animation-duration: 14.9234s;"></div><div class="particle" style="left: 57.1212%; animation-delay: 8.17557s; animation-duration: 18.256s;"></div><div class="particle" style="left: 36.4294%; animation-delay: 13.2432s; animation-duration: 12.9171s;"></div><div class="particle" style="left: 1.31473%; animation-delay: 3.86856s; animation-duration: 19.4739s;"></div><div class="particle" style="left: 3.01325%; animation-delay: 1.65414s; animation-duration: 16.0717s;"></div><div class="particle" style="left: 62.9851%; animation-delay: 4.2864s; animation-duration: 18.0659s;"></div><div class="particle" style="left: 57.0973%; animation-delay: 3.00649s; animation-duration: 19.5479s;"></div><div class="particle" style="left: 38.8936%; animation-delay: 6.31282s; animation-duration: 17.33s;"></div><div class="particle" style="left: 66.2306%; animation-delay: 9.21318s; animation-duration: 15.9664s;"></div><div class="particle" style="left: 26.8501%; animation-delay: 1.23683s; animation-duration: 18.8s;"></div><div class="particle" style="left: 49.7132%; animation-delay: 0.855838s; animation-duration: 18.4093s;"></div><div class="particle" style="left: 28.0957%; animation-delay: 3.40487s; animation-duration: 14.2429s;"></div><div class="particle" style="left: 59.6544%; animation-delay: 13.8963s; animation-duration: 19.3863s;"></div><div class="particle" style="left: 16.1245%; animation-delay: 4.67734s; animation-duration: 17.2853s;"></div><div class="particle" style="left: 48.95%; animation-delay: 4.66839s; animation-duration: 10.2278s;"></div><div class="particle" style="left: 58.8452%; animation-delay: 14.2335s; animation-duration: 15.4023s;"></div><div class="particle" style="left: 14.8329%; animation-delay: 2.80119s; animation-duration: 10.9504s;"></div><div class="particle" style="left: 48.0835%; animation-delay: 0.285121s; animation-duration: 13.2234s;"></div><div class="particle" style="left: 0.174574%; animation-delay: 12.8074s; animation-duration: 16.0701s;"></div><div class="particle" style="left: 30.1936%; animation-delay: 3.8727s; animation-duration: 11.3138s;"></div><div class="particle" style="left: 11.1742%; animation-delay: 6.40483s; animation-duration: 15.7468s;"></div><div class="particle" style="left: 6.24803%; animation-delay: 3.00494s; animation-duration: 17.544s;"></div><div class="particle" style="left: 58.0242%; animation-delay: 12.9675s; animation-duration: 15.1381s;"></div><div class="particle" style="left: 87.9042%; animation-delay: 9.33901s; animation-duration: 19.5317s;"></div><div class="particle" style="left: 87.2529%; animation-delay: 12.103s; animation-duration: 11.5279s;"></div><div class="particle" style="left: 54.5139%; animation-delay: 4.36044s; animation-duration: 15.301s;"></div><div class="particle" style="left: 34.5401%; animation-delay: 8.65261s; animation-duration: 13.6591s;"></div><div class="particle" style="left: 6.82294%; animation-delay: 12.319s; animation-duration: 14.8131s;"></div><div class="particle" style="left: 48.3536%; animation-delay: 14.743s; animation-duration: 10.3683s;"></div><div class="particle" style="left: 44.4399%; animation-delay: 12.2963s; animation-duration: 15.2442s;"></div><div class="particle" style="left: 21.3239%; animation-delay: 6.3838s; animation-duration: 16.8333s;"></div><div class="particle" style="left: 21.3829%; animation-delay: 10.2779s; animation-duration: 11.072s;"></div><div class="particle" style="left: 71.2902%; animation-delay: 3.06777s; animation-duration: 17.8745s;"></div><div class="particle" style="left: 73.1356%; animation-delay: 11.3709s; animation-duration: 13.4201s;"></div><div class="particle" style="left: 41.6246%; animation-delay: 2.73895s; animation-duration: 16.5476s;"></div><div class="particle" style="left: 75.4093%; animation-delay: 14.385s; animation-duration: 18.0764s;"></div><div class="particle" style="left: 29.1075%; animation-delay: 9.52877s; animation-duration: 10.8647s;"></div><div class="particle" style="left: 65.0928%; animation-delay: 12.8292s; animation-duration: 18.8139s;"></div><div class="particle" style="left: 76.0313%; animation-delay: 10.8474s; animation-duration: 11.8151s;"></div><div class="particle" style="left: 26.7279%; animation-delay: 14.1987s; animation-duration: 14.8952s;"></div><div class="particle" style="left: 91.7349%; animation-delay: 5.46762s; animation-duration: 13.3703s;"></div><div class="particle" style="left: 29.6027%; animation-delay: 1.26051s; animation-duration: 10.5584s;"></div><div class="particle" style="left: 25.0179%; animation-delay: 14.3175s; animation-duration: 16.4297s;"></div><div class="particle" style="left: 34.5938%; animation-delay: 12.7498s; animation-duration: 12.7971s;"></div></div>
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
         <div class="hero-content">
-            <h1>DJ RAMZES</h1>
-            <p>Tworzę niezapomniane chwile poprzez muzykę</p>
-            <a href="#contact" class="cta-button">Zarezerwuj Termin</a>
+            <div class="hero-badge">⭐ Ponad 500 zadowolonych klientów w całej Polsce</div>
+            <h1 class="fade-in">Rozgrzewam <span>Serdecznie</span> Was 😊</h1>
+            <p class="hero-subtitle">DJ RAMZES - Twój Profesjonalny DJ na Każdą Okazję</p>
+            <p>Tworzę niezapomniane chwile poprzez muzykę. Wesela, imprezy firmowe, eventy - zapewniam profesjonalną oprawę muzyczną, która porwie wszystkich do zabawy!</p>
+            <div class="cta-buttons">
+                <a href="#contact" class="cta-button">
+                    <span>Sprawdź Wolne Terminy</span>
+                    <span>→</span>
+                </a>
+                <a href="tel:+48123456789" class="cta-button cta-button-outline">
+                    <span>📞 Zadzwoń Teraz</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item fade-in">
+                    <div class="stat-number">500<span>+</span></div>
+                    <div class="stat-label">Zadowolonych Klientów</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">10<span>+</span></div>
+                    <div class="stat-label">Lat Doświadczenia</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">1000<span>+</span></div>
+                    <div class="stat-label">Zrealizowanych Eventów</div>
+                </div>
+                <div class="stat-item fade-in">
+                    <div class="stat-number">24<span>/7</span></div>
+                    <div class="stat-label">Wsparcie Klienta</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Poznaj Mnie</span>
+                <h2 class="section-title">Dlaczego <span>DJ Ramzes</span>?</h2>
+                <p class="section-subtitle">Pasja, doświadczenie i profesjonalizm w jednym</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text fade-in-left">
+                    <h3>Cześć! Jestem DJ Ramzes</h3>
+                    <p>Muzyka to moja pasja od ponad 10 lat. Rozpoczynałem swoją przygodę od małych imprez rodzinnych, a dziś mam przyjemność obsługiwać największe eventy w całej Polsce. Każde wydarzenie traktuję indywidualnie, dbając o każdy szczegół oprawy muzycznej.</p>
+                    <p>Specjalizuję się w tworzeniu niezapomnianych chwil podczas wesel, imprez firmowych, studniówek i eventów plenerowych. Mój profesjonalny sprzęt nagłośnieniowy i oświetleniowy najwyższej klasy gwarantuje krystalicznie czysty dźwięk i spektakularne efekty wizualne.</p>
+                    <p>Współpracuję z najlepszymi salami weselnymi i eventowymi w Warszawie i okolicach. Jestem elastyczny, otwarty na sugestie i zawsze stawiam na perfekcyjną komunikację z klientami. Wasze zadowolenie jest moim priorytetem!</p>
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <span class="feature-icon">🎵</span>
+                            <h4>Bogaty Repertuar</h4>
+                            <p>Ponad 50 000 utworów w bibliotece</p>
+                        </div>
+                        <div class="feature-box">
+                            <span class="feature-icon">🎛️</span>
+                            <h4>Profesjonalny Sprzęt</h4>
+                            <p>Najnowszy sprzęt Pioneer DJ i JBL</p>
+                        </div>
+                        <div class="feature-box">
+                            <span class="feature-icon">💡</span>
+                            <h4>Efekty Świetlne</h4>
+                            <p>LED, lasery, dym, konfetti</p>
+                        </div>
+                        <div class="feature-box">
+                            <span class="feature-icon">🏆</span>
+                            <h4>Doświadczenie</h4>
+                            <p>1000+ imprez na koncie</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image fade-in-right">
+                    <img src="https://scontent.fpoz4-1.fna.fbcdn.net/v/t39.30808-6/471172723_9008852312528708_8842855674266346411_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Z_15IO0KzH8Q7kNvwFARfwq&_nc_oc=AdnTUHVjXHxG61IjFsXwqQA0FomzpmbFD75XwAbhAyhRWsMyIvjeRagZyqzWqxD_IUA&_nc_zt=23&_nc_ht=scontent.fpoz4-1.fna&_nc_gid=joAdMHIW_L1NBNt3F8_F5g&oh=00_AfRP8agKK_1iljRezShY5BB5qh_jhDYDLEWcD4luz7l4Gg&oe=6875122E" alt="DJ Ramzes przy konsoli" loading="lazy">
+                    <div class="about-overlay">
+                        <div class="experience-badge">
+                            <span>10+</span>
+                            <span>Lat Doświadczenia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="services" class="fade-in visible">
-        <h2 class="section-title">Moja Oferta</h2>
-        <div class="services-grid">
-            <div class="service-card" style="--mouse-x: 154.59999084472656px; --mouse-y: 32px;">
-                <div class="service-icon">🎊</div>
-                <h3>Wesela</h3>
-                <p>Profesjonalna oprawa muzyczna Waszego wielkiego dnia. Gwarantuję świetną zabawę dla wszystkich gości, niezależnie od wieku.</p>
-                <span class="price">od 2500 zł</span>
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Co Oferuję</span>
+                <h2 class="section-title">Profesjonalne <span>Usługi DJ</span></h2>
+                <p class="section-subtitle">Kompleksowa oprawa muzyczna każdego wydarzenia</p>
             </div>
-            <div class="service-card" style="--mouse-x: 351.27496337890625px; --mouse-y: 230.60000038146973px;">
-                <div class="service-icon">🏢</div>
-                <h3>Imprezy Firmowe</h3>
-                <p>Eventy korporacyjne, imprezy integracyjne, jubileusze firmowe. Dostosowuję muzykę do charakteru wydarzenia.</p>
-                <span class="price">od 1800 zł</span>
-            </div>
-            <div class="service-card" style="--mouse-x: 356.9375px; --mouse-y: 125.51113319396973px;">
-                <div class="service-icon">🎂</div>
-                <h3>Urodziny i Prywatne Imprezy</h3>
-                <p>Osiemnastki, urodziny, imprezy tematyczne. Każda impreza to wyjątkowe wydarzenie z muzyką dopasowaną do Twoich preferencji.</p>
-                <span class="price">od 1200 zł</span>
-            </div>
-            <div class="service-card" style="--mouse-x: 10.599990844726562px; --mouse-y: 4.2908172607421875px;">
-                <div class="service-icon">🎓</div>
-                <h3>Studniówki</h3>
-                <p>Niezapomniana studniówka z muzyką, która porwie wszystkich do tańca. Profesjonalne nagłośnienie i oświetlenie.</p>
-                <span class="price">od 1500 zł</span>
-            </div>
-            <div class="service-card" style="--mouse-x: 22.27496337890625px; --mouse-y: 91.5062484741211px;">
-                <div class="service-icon">🎤</div>
-                <h3>Eventy Plenerowe</h3>
-                <p>Festyny, pikniki, imprezy plenerowe. Posiadam mobilny sprzęt najwyższej jakości, idealny na wydarzenia outdoor.</p>
-                <span class="price">od 2000 zł</span>
-            </div>
-            <div class="service-card" style="--mouse-x: -1.0625px; --mouse-y: 166.88750076293945px;">
-                <div class="service-icon">🎵</div>
-                <h3>Kluby i Lokale</h3>
-                <p>Regularne sety w klubach i lokalach. Tworzę niepowtarzalną atmosferę, która przyciąga gości.</p>
-                <span class="price">wycena indywidualna</span>
+            <div class="services-grid">
+                <div class="service-card fade-in">
+                    <span class="service-icon">💑</span>
+                    <h3>Wesela i Przyjęcia</h3>
+                    <p>Sprawię, że Wasz wielki dzień będzie niezapomniany! Profesjonalna oprawa muzyczna ceremonii, pierwszy taniec, zabawy weselne i muzyka dostosowana do wszystkich gości.</p>
+                    <ul class="service-features">
+                        <li>Konsultacja przedweselna i ustalenie playlisty</li>
+                        <li>Oprawa muzyczna ceremonii ślubnej</li>
+                        <li>Pierwszy taniec z efektami specjalnymi</li>
+                        <li>Prowadzenie zabaw i konkursów weselnych</li>
+                        <li>Muzyka dla każdego pokolenia</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Cena od</span>
+                        <span class="price-amount">2500</span>
+                        <span class="price-currency">PLN</span>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">🏢</span>
+                    <h3>Imprezy Firmowe</h3>
+                    <p>Profesjonalna obsługa eventów korporacyjnych, gal firmowych, jubileuszy i imprez integracyjnych. Dostosowuję muzykę do charakteru wydarzenia i Waszej branży.</p>
+                    <ul class="service-features">
+                        <li>Oprawa konferencji i prezentacji</li>
+                        <li>Muzyka podczas bankietów i gal</li>
+                        <li>Eventy integracyjne i team building</li>
+                        <li>Imprezy świąteczne i noworoczne</li>
+                        <li>Nagłośnienie przemówień i prezentacji</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Cena od</span>
+                        <span class="price-amount">1800</span>
+                        <span class="price-currency">PLN</span>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">🎉</span>
+                    <h3>Imprezy Prywatne</h3>
+                    <p>Urodziny, osiemnastki, chrzciny, komunie - każda impreza rodzinna zasługuje na świetną muzykę! Tworzę atmosferę dopasowaną do charakteru wydarzenia.</p>
+                    <ul class="service-features">
+                        <li>Osiemnastki z ceremonią i zabawami</li>
+                        <li>Urodziny dla każdego wieku</li>
+                        <li>Imprezy tematyczne (lata 80, 90, disco)</li>
+                        <li>Chrzciny i komunie</li>
+                        <li>Rocznice i jubileusze rodzinne</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Cena od</span>
+                        <span class="price-amount">1200</span>
+                        <span class="price-currency">PLN</span>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">🎓</span>
+                    <h3>Studniówki</h3>
+                    <p>Pamiętna studniówka to podstawa! Zapewniam profesjonalną oprawę poloneza, świetną muzykę do tańca i niezapomniane show świetlne.</p>
+                    <ul class="service-features">
+                        <li>Oprawa muzyczna poloneza</li>
+                        <li>Pierwszy taniec uczniów i rodziców</li>
+                        <li>Konkursy i zabawy studniówkowe</li>
+                        <li>Efekty specjalne (dym, konfetti, lasery)</li>
+                        <li>Współpraca z komitetem organizacyjnym</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Cena od</span>
+                        <span class="price-amount">1500</span>
+                        <span class="price-currency">PLN</span>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">🌳</span>
+                    <h3>Eventy Plenerowe</h3>
+                    <p>Festyny, pikniki, imprezy outdoor - mam doświadczenie w obsłudze dużych wydarzeń plenerowych. Mobilny sprzęt dostosowany do każdych warunków.</p>
+                    <ul class="service-features">
+                        <li>Festyny miejskie i gminne</li>
+                        <li>Pikniki firmowe i rodzinne</li>
+                        <li>Koncerty i przeglądy muzyczne</li>
+                        <li>Imprezy sportowe i charytatywne</li>
+                        <li>Mobilne nagłośnienie i oświetlenie</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Cena od</span>
+                        <span class="price-amount">2000</span>
+                        <span class="price-currency">PLN</span>
+                    </div>
+                </div>
+                <div class="service-card fade-in">
+                    <span class="service-icon">🎵</span>
+                    <h3>Kluby i Rezydencje</h3>
+                    <p>Regularne sety w klubach i lokalach rozrywkowych. Tworzę niepowtarzalną atmosferę, która przyciąga gości i buduje renomę lokalu.</p>
+                    <ul class="service-features">
+                        <li>Rezydencje w klubach nocnych</li>
+                        <li>Imprezy tematyczne i specjalne</li>
+                        <li>Współpraca z barmanami i obsługą</li>
+                        <li>Promocja eventów w social media</li>
+                        <li>Elastyczne godziny pracy</li>
+                    </ul>
+                    <div class="service-price">
+                        <span class="price-label">Cena</span>
+                        <span class="price-amount">Indywidualna</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="fade-in visible">
-        <h2 class="section-title">Portfolio</h2>
-        <div class="portfolio-filters">
-            <button class="filter-btn" data-filter="all">Wszystko</button>
-            <button class="filter-btn" data-filter="wedding">Wesela</button>
-            <button class="filter-btn" data-filter="corporate">Firmowe</button>
-            <button class="filter-btn" data-filter="birthday">Urodziny</button>
-            <button class="filter-btn active" data-filter="outdoor">Plenerowe</button>
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Realizacje</span>
+                <h2 class="section-title">Moje <span>Portfolio</span></h2>
+                <p class="section-subtitle">Wybrane wydarzenia z ostatnich lat</p>
+            </div>
+            <div class="portfolio-filters fade-in">
+                <button class="filter-btn active" data-filter="all">Wszystkie</button>
+                <button class="filter-btn" data-filter="wedding">Wesela</button>
+                <button class="filter-btn" data-filter="corporate">Firmowe</button>
+                <button class="filter-btn" data-filter="birthday">Urodziny</button>
+                <button class="filter-btn" data-filter="outdoor">Plenerowe</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=2070" alt="Wesele Ani i Marka" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Wesele Ani i Marka</h3>
+                        <p class="portfolio-category">Wesele</p>
+                        <p class="portfolio-details">Eleganckie wesele w Hotel Marriott Warsaw. Ponad 200 gości bawiło się do białego rana przy największych hitach disco polo i muzyce klubowej.</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-stat">👥 200 gości</span>
+                            <span class="portfolio-stat">📅 Czerwiec 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="corporate">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?q=80&w=2070" alt="Gala Firmowa XYZ" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Gala Firmowa Tech Summit</h3>
+                        <p class="portfolio-category">Event Korporacyjny</p>
+                        <p class="portfolio-details">Prestiżowa gala technologiczna w Centrum Expo XXI. Oprawa muzyczna konferencji, bankietu i after party dla branży IT.</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-stat">👥 500 osób</span>
+                            <span class="portfolio-stat">📅 Wrzesień 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="birthday">
+                    <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?q=80&w=2070" alt="18-stka Kasi" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">18-stka Kasi</h3>
+                        <p class="portfolio-category">Urodziny</p>
+                        <p class="portfolio-details">Niezapomniana osiemnastka w Villa Park. Ceremonia przekazania kluczy, pierwszy toast i szalona zabawa do rana!</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-stat">👥 80 gości</span>
+                            <span class="portfolio-stat">📅 Maj 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="outdoor">
+                    <img src="https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=2070" alt="Festyn Miejski" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Festyn Miejski Warszawa</h3>
+                        <p class="portfolio-category">Event Plenerowy</p>
+                        <p class="portfolio-details">Największy festyn miejski w Parku Łazienkowskim. 8 godzin muzyki na żywo, konkursy i świetna zabawa dla całych rodzin.</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-stat">👥 2000+ osób</span>
+                            <span class="portfolio-stat">📅 Lipiec 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="wedding">
+                    <img src="https://images.unsplash.com/photo-1529636798458-92182e662485?q=80&w=2070" alt="Wesele w Pałacu" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Wesele w Pałacu Królewskim</h3>
+                        <p class="portfolio-category">Wesele</p>
+                        <p class="portfolio-details">Bajkowe wesele w zabytkowym Pałacu w Radziejowicach. Oprawa muzyczna ceremonii w ogrodzie i przyjęcia w sali balowej.</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-stat">👥 300 gości</span>
+                            <span class="portfolio-stat">📅 Sierpień 2024</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in" data-category="corporate">
+                    <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?q=80&w=2070" alt="Jubileusz Firmowy" class="portfolio-image" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Jubileusz 25-lecia Firmy</h3>
+                        <p class="portfolio-category">Event Korporacyjny</p>
+                        <p class="portfolio-details">Uroczysta gala z okazji 25-lecia działalności firmy. Elegancka oprawa muzyczna i spektakularne show świetlne.</p>
+                        <div class="portfolio-stats">
+                            <span class="portfolio-stat">👥 250 osób</span>
+                            <span class="portfolio-stat">📅 Październik 2024</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="portfolio-grid">
-            <div class="portfolio-item" data-category="wedding" style="display: none; opacity: 0; transform: scale(0.8);">
-                <div class="portfolio-overlay">
-                    <h3 class="portfolio-title">Wesele Ani i Marka</h3>
-                    <p class="portfolio-category">Wesele • 200 gości</p>
-                </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Jak Pracuję</span>
+                <h2 class="section-title">Proces <span>Współpracy</span></h2>
+                <p class="section-subtitle">Od pierwszego kontaktu do niezapomnianej imprezy</p>
             </div>
-            <div class="portfolio-item" data-category="corporate" style="opacity: 0; transform: scale(0.8); display: none; --mouse-x: 535.5999908447266px; --mouse-y: 106.375px;">
-                <div class="portfolio-overlay">
-                    <h3 class="portfolio-title">Event Firmowy XYZ</h3>
-                    <p class="portfolio-category">Impreza Firmowa • 150 osób</p>
+            <div class="timeline">
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <h3>Kontakt i Konsultacja</h3>
+                        <p>Rozpoczynamy od rozmowy telefonicznej lub spotkania, podczas którego poznajemy Wasze oczekiwania, preferencje muzyczne i szczegóły wydarzenia. To moment na wszystkie pytania!</p>
+                    </div>
+                    <div class="timeline-icon">1</div>
+                    <div class="timeline-content"></div>
                 </div>
-            </div>
-            <div class="portfolio-item" data-category="birthday" style="opacity: 0; transform: scale(0.8); display: none;">
-                <div class="portfolio-overlay">
-                    <h3 class="portfolio-title">18-stka Kasi</h3>
-                    <p class="portfolio-category">Urodziny • 80 gości</p>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content"></div>
+                    <div class="timeline-icon">2</div>
+                    <div class="timeline-content">
+                        <h3>Oferta i Umowa</h3>
+                        <p>Przygotowuję indywidualną ofertę dopasowaną do Waszych potrzeb. Po akceptacji podpisujemy umowę, która gwarantuje profesjonalną obsługę w ustalonym terminie.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="portfolio-item" data-category="outdoor" style="opacity: 1; transform: scale(1); display: block; --mouse-x: 721.5999908447266px; --mouse-y: 32.17500305175781px;">
-                <div class="portfolio-overlay">
-                    <h3 class="portfolio-title">Festyn Miejski</h3>
-                    <p class="portfolio-category">Event Plenerowy • 500+ osób</p>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content">
+                        <h3>Planowanie Repertuaru</h3>
+                        <p>Na 2-4 tygodnie przed wydarzeniem ustalamy szczegółową playlistę, pierwsze tańce, ulubione utwory i te, których nie chcecie usłyszeć. Wszystko według Waszych życzeń!</p>
+                    </div>
+                    <div class="timeline-icon">3</div>
+                    <div class="timeline-content"></div>
                 </div>
-            </div>
-            <div class="portfolio-item" data-category="wedding" style="display: none; opacity: 0; transform: scale(0.8);">
-                <div class="portfolio-overlay">
-                    <h3 class="portfolio-title">Wesele w Pałacu</h3>
-                    <p class="portfolio-category">Wesele • 300 gości</p>
-                </div>
-            </div>
-            <div class="portfolio-item" data-category="corporate" style="opacity: 0; transform: scale(0.8); display: none; --mouse-x: 186.5999755859375px; --mouse-y: 8.375px;">
-                <div class="portfolio-overlay">
-                    <h3 class="portfolio-title">Jubileusz 25-lecia</h3>
-                    <p class="portfolio-category">Event Korporacyjny • 250 osób</p>
+                <div class="timeline-item fade-in">
+                    <div class="timeline-content"></div>
+                    <div class="timeline-icon">4</div>
+                    <div class="timeline-content">
+                        <h3>Realizacja Wydarzenia</h3>
+                        <p>W dniu imprezy przyjeżdżam 2-3 godziny wcześniej, montuję sprzęt i przeprowadzam próby. Podczas wydarzenia dbam o świetną atmosferę i reaguje na potrzeby gości.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Testimonials Section -->
-    <section id="testimonials" class="fade-in visible">
-        <h2 class="section-title">Co Mówią Klienci</h2>
-        <div class="testimonials-container">
-            <div class="testimonial-card" style="--mouse-x: 342.59999084472656px; --mouse-y: 53.21504211425781px;">
-                <span class="quote-icon">"</span>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">DJ Ramzes to prawdziwy profesjonalista! Nasza impreza weselna była niezapomniana. Goście bawili się do białego rana, a muzyka była idealnie dopasowana do wszystkich grup wiekowych.</p>
-                <p class="testimonial-author">Anna i Marek Kowalscy</p>
-                <p class="testimonial-event">Wesele, czerwiec 2024</p>
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Opinie</span>
+                <h2 class="section-title">Co Mówią <span>Klienci</span></h2>
+                <p class="section-subtitle">Prawdziwe opinie od prawdziwych ludzi</p>
             </div>
-            <div class="testimonial-card" style="--mouse-x: 4.27496337890625px; --mouse-y: 81.5380859375px;">
-                <span class="quote-icon">"</span>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">Świetna współpraca! DJ Ramzes perfekcyjnie wyczuł atmosferę naszego eventu firmowego. Muzyka była na najwyższym poziomie, a profesjonalizm godny polecenia.</p>
-                <p class="testimonial-author">Piotr Nowak, CEO TechCorp</p>
-                <p class="testimonial-event">Event firmowy, wrzesień 2024</p>
+            <div class="testimonials-container">
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">AK</div>
+                            <div class="testimonial-info">
+                                <p class="testimonial-author">Anna i Krzysztof Kowalscy</p>
+                                <p class="testimonial-event">Wesele w Hotel Marriott</p>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "DJ Ramzes to absolutny profesjonalista! Nasze wesele było niezapomniane dzięki jego pracy. Goście w wieku od 3 do 80 lat bawili się wspaniale. Muzyka była idealnie dopasowana do każdej grupy wiekowej. Polecamy z całego serca!"
+                        </p>
+                        <span class="testimonial-date">Czerwiec 2024</span>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">PN</div>
+                            <div class="testimonial-info">
+                                <p class="testimonial-author">Piotr Nowak</p>
+                                <p class="testimonial-event">CEO TechCorp - Gala firmowa</p>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Współpraca z DJ Ramzesem była perfekcyjna od początku do końca. Profesjonalna obsługa naszej gali technologicznej, świetne wyczucie atmosfery i dostosowanie muzyki do charakteru wydarzenia. Wszyscy goście byli zachwyceni!"
+                        </p>
+                        <span class="testimonial-date">Wrzesień 2024</span>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">KW</div>
+                            <div class="testimonial-info">
+                                <p class="testimonial-author">Kasia Wiśniewska</p>
+                                <p class="testimonial-event">18-ste urodziny</p>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Najlepsza osiemnastka ever! DJ Ramzes sprawił, że moja impreza była wyjątkowa. Świetne przejścia między utworami, super energia i kontakt z gośćmi. Wszyscy pytali o kontakt do niego. Dziękuję za niezapomnianą noc!"
+                        </p>
+                        <span class="testimonial-date">Maj 2024</span>
+                    </div>
+                    <div class="testimonial-card fade-in">
+                        <div class="testimonial-header">
+                            <div class="testimonial-avatar">MK</div>
+                            <div class="testimonial-info">
+                                <p class="testimonial-author">Magdalena Kowalczyk</p>
+                                <p class="testimonial-event">HR Director - Jubileusz firmowy</p>
+                            </div>
+                        </div>
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Organizowaliśmy jubileusz 25-lecia firmy i DJ Ramzes przekroczył nasze oczekiwania. Profesjonalna obsługa konferencji w ciągu dnia i świetna zabawa wieczorem. Elastyczność i dostosowanie do zmieniającego się harmonogramu - bezcenne!"
+                        </p>
+                        <span class="testimonial-date">Październik 2024</span>
+                    </div>
+                </div>
             </div>
-            <div class="testimonial-card" style="--mouse-x: 27.9375px; --mouse-y: 16.375px;">
-                <span class="quote-icon">"</span>
-                <div class="stars">★★★★★</div>
-                <p class="testimonial-text">Najlepsza 18-stka ever! DJ Ramzes sprawił, że moja impreza była wyjątkowa. Świetne przejścia między utworami i niesamowita energia!</p>
-                <p class="testimonial-author">Kasia Wiśniewska</p>
-                <p class="testimonial-event">18-ste urodziny, maj 2024</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">FAQ</span>
+                <h2 class="section-title">Często Zadawane <span>Pytania</span></h2>
+                <p class="section-subtitle">Wszystko co powinieneś wiedzieć przed rezerwacją</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-column fade-in-left">
+                    <h3>Ogólne pytania</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Jak wcześnie należy zarezerwować termin?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Zalecam rezerwację minimum 3-6 miesięcy przed planowanym wydarzeniem. W sezonie weselnym (maj-wrzesień) najlepiej zarezerwować termin nawet z rocznym wyprzedzeniem. Dla dat weekendowych rezerwacja rok wcześniej to standard.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Czy obsługujesz imprezy poza Warszawą?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tak, obsługuję imprezy na terenie całej Polski. Do 50 km od Warszawy dojazd jest wliczony w cenę. Dla dalszych lokalizacji doliczam koszty dojazdu według stawki 2 zł/km. Przy imprezach wielodniowych lub bardzo odległych zapewniam sobie nocleg.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Co w przypadku awarii sprzętu?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Zawsze posiadam kompletny zapasowy sprzęt na miejscu imprezy - drugi mikser, zapasowe mikrofony, kable. Dodatkowo współpracuję z zaufanymi DJ-ami, którzy w nagłych przypadkach mogą mnie zastąpić. Wasza impreza jest w 100% zabezpieczona!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Czy oferujesz dodatkowe atrakcje?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tak! Oferuję fotobudkę, ciężki dym na pierwszy taniec, napis LOVE, konfetti, bańki mydlane, dodatkowe oświetlenie LED, ekrany i projektory. Wszystkie dodatki wyceniam indywidualnie według Waszych potrzeb.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-column fade-in-right">
+                    <h3>Kwestie techniczne</h3>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Jaki sprzęt jest wliczony w cenę?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>W cenę wliczony jest profesjonalny system nagłośnieniowy JBL/RCF (dostosowany do wielkości sali), mikser Pioneer DJ, 2 mikrofony bezprzewodowe Shure, podstawowe oświetlenie LED. Dla większych imprez oferuję rozbudowane systemy nagłośnieniowe.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Czy mogę wybrać własną playlistę?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Oczywiście! Każde wydarzenie personalizuję zgodnie z Waszymi preferencjami. Możecie przesłać listę ulubionych utworów, pierwszy taniec, piosenki specjalne i te, których nie chcecie usłyszeć. Mam dostęp do ponad 50 000 utworów!</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Jak długo trwa montaż sprzętu?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Standardowy montaż trwa 1,5-2 godziny. Przyjeżdżam odpowiednio wcześniej, aby wszystko przygotować, przetestować i przeprowadzić próbę dźwięku. Demontaż po imprezie zajmuje około 1 godziny.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            Czy prowadzisz zabawy weselne?
+                            <span class="faq-icon">+</span>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Tak, prowadzę zabawy i konkursy weselne! Mam przygotowany zestaw sprawdzonych zabaw dla różnych grup wiekowych. Wszystkie zabawy konsultuję wcześniej z Parą Młodą. Dbam o to, by były eleganckie i nie wprawiały gości w zakłopotanie.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content fade-in">
+                <h2>Gotowy na Niezapomnianą Imprezę?</h2>
+                <p>Nie czekaj! Popularne terminy rezerwowane są z dużym wyprzedzeniem.</p>
+                <a href="#contact" class="cta-button-dark">Sprawdź Dostępność Terminu</a>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="fade-in visible">
-        <h2 class="section-title">Kontakt</h2>
-        <div class="contact-container">
-            <div class="contact-form">
-                <form id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Imię i nazwisko</label>
-                        <input type="text" id="name" name="name" required="">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required="">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefon</label>
-                        <input type="tel" id="phone" name="phone" required="">
-                    </div>
-                    <div class="form-group">
-                        <label for="event-date">Data wydarzenia</label>
-                        <input type="date" id="event-date" name="event-date" required="">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Wiadomość</label>
-                        <textarea id="message" name="message" placeholder="Opisz swoje wydarzenie..." required=""></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Wyślij zapytanie</button>
-                </form>
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header fade-in">
+                <span class="section-label">Kontakt</span>
+                <h2 class="section-title">Skontaktuj się ze <span>Mną</span></h2>
+                <p class="section-subtitle">Zapytaj o wolny termin i otrzymaj indywidualną wycenę</p>
             </div>
-            <div class="contact-info">
-                <div class="info-item">
-                    <span class="info-icon">📞</span>
-                    <div class="info-text">
-                        <h3>Telefon</h3>
-                        <p>+48 123 456 789</p>
+            <div class="contact-wrapper">
+                <div class="contact-form-wrapper fade-in-left">
+                    <div class="form-header">
+                        <h3>Wypełnij formularz</h3>
+                        <p>Odpowiadam na wszystkie zapytania w ciągu 24 godzin</p>
                     </div>
+                    <form id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Imię i nazwisko *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Telefon *</label>
+                                <input type="tel" id="phone" name="phone" required pattern="[0-9\s\-\+]{9,15}">
+                            </div>
+                            <div class="form-group">
+                                <label for="event-date">Data wydarzenia *</label>
+                                <input type="date" id="event-date" name="event-date" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="event-type">Rodzaj wydarzenia *</label>
+                                <select id="event-type" name="event-type" required>
+                                    <option value="">Wybierz rodzaj wydarzenia</option>
+                                    <option value="wesele">Wesele</option>
+                                    <option value="firmowa">Impreza firmowa</option>
+                                    <option value="urodziny">Urodziny / Osiemnastka</option>
+                                    <option value="studniowka">Studniówka</option>
+                                    <option value="plenerowa">Impreza plenerowa</option>
+                                    <option value="klub">Event klubowy</option>
+                                    <option value="inna">Inna</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Liczba gości</label>
+                                <input type="number" id="guests" name="guests" placeholder="np. 150">
+                            </div>
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="location">Lokalizacja wydarzenia</label>
+                            <input type="text" id="location" name="location" placeholder="np. Warszawa, Hotel Marriott">
+                        </div>
+                        <div class="form-group full-width">
+                            <label for="message">Dodatkowe informacje</label>
+                            <textarea id="message" name="message" placeholder="Opisz swoje oczekiwania, preferencje muzyczne, specjalne wymagania..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <span>Wyślij zapytanie</span>
+                            <span>→</span>
+                        </button>
+                    </form>
                 </div>
-                <div class="info-item">
-                    <span class="info-icon">✉️</span>
-                    <div class="info-text">
-                        <h3>Email</h3>
-                        <p>kontakt@djramzes.pl</p>
+                <div class="contact-info-wrapper fade-in-right">
+                    <div class="contact-info-header">
+                        <h3>Bezpośredni kontakt</h3>
+                        <p>Preferujesz rozmowę? Zadzwoń lub napisz!</p>
                     </div>
-                </div>
-                <div class="info-item">
-                    <span class="info-icon">📍</span>
-                    <div class="info-text">
-                        <h3>Obszar działania</h3>
-                        <p>Cała Polska</p>
+                    <div class="contact-cards">
+                        <div class="contact-card">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-content">
+                                <h4>Telefon</h4>
+                                <p><a href="tel:+48123456789">+48 123 456 789</a></p>
+                                <p>Pon-Niedz: 10:00 - 20:00</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-content">
+                                <h4>Email</h4>
+                                <p><a href="mailto:kontakt@djramzes.pl">kontakt@djramzes.pl</a></p>
+                                <p>Odpowiadam w ciągu 24h</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-content">
+                                <h4>Obszar działania</h4>
+                                <p>Warszawa i cała Polska</p>
+                                <p>Dojazd gratis do 50km</p>
+                            </div>
+                        </div>
+                        <div class="contact-card">
+                            <div class="contact-icon">💬</div>
+                            <div class="contact-content">
+                                <h4>WhatsApp</h4>
+                                <p><a href="https://wa.me/48123456789">+48 123 456 789</a></p>
+                                <p>Szybka odpowiedź</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="social-links">
-                    <a href="#" class="social-link" aria-label="Facebook">f</a>
-                    <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                    <a href="#" class="social-link" aria-label="YouTube">▶</a>
-                    <a href="#" class="social-link" aria-label="TikTok">♪</a>
+                    <div class="social-links-section">
+                        <h4>Znajdź mnie w social media</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="Facebook">f</a>
+                            <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                            <a href="#" class="social-link" aria-label="YouTube">▶</a>
+                            <a href="#" class="social-link" aria-label="TikTok">♪</a>
+                            <a href="#" class="social-link" aria-label="Spotify">🎵</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -946,60 +2626,110 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 DJ Ramzes. Wszystkie prawa zastrzeżone.</p>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">DJ RAMZES</a>
+                    <p>Profesjonalna oprawa muzyczna wydarzeń od 2014 roku. Tworzę niezapomniane chwile poprzez muzykę, która łączy pokolenia i bawi wszystkich gości. Doświadczenie, pasja i najwyższej jakości sprzęt.</p>
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Twój email">
+                            <button type="submit">Zapisz</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Szybkie linki</h3>
+                    <ul>
+                        <li><a href="#about">O mnie</a></li>
+                        <li><a href="#services">Usługi DJ</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#testimonials">Opinie</a></li>
+                        <li><a href="#contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Usługi</h3>
+                    <ul>
+                        <li><a href="#services">DJ na wesele</a></li>
+                        <li><a href="#services">DJ na firmówkę</a></li>
+                        <li><a href="#services">DJ na osiemnastkę</a></li>
+                        <li><a href="#services">DJ na studniówkę</a></li>
+                        <li><a href="#services">Eventy plenerowe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Informacje</h3>
+                    <ul>
+                        <li><a href="#">Cennik</a></li>
+                        <li><a href="#">Wynajem sprzętu</a></li>
+                        <li><a href="#">Współpraca</a></li>
+                        <li><a href="#">Blog muzyczny</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 DJ Ramzes. Wszystkie prawa zastrzeżone. | Projekt i realizacja: <a href="#">WebStudio</a></p>
+                <p><a href="#">Polityka prywatności</a> | <a href="#">Regulamin</a> | <a href="#">RODO</a></p>
+            </div>
+        </div>
     </footer>
 
     <script>
-        // Loader
+        // Preloader
         window.addEventListener('load', () => {
             setTimeout(() => {
-                document.querySelector('.loader').classList.add('hidden');
-            }, 1000);
+                document.getElementById('preloader').classList.add('fade-out');
+            }, 500);
         });
 
-        // Particles
-        function createParticles() {
-            const particlesContainer = document.querySelector('.particles');
-            const particleCount = 50;
-
-            for (let i = 0; i < particleCount; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 15 + 's';
-                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
-                particlesContainer.appendChild(particle);
-            }
-        }
-        createParticles();
-
         // Navbar scroll effect
+        let lastScroll = 0;
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 50) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
             }
+            
+            lastScroll = currentScroll;
         });
 
         // Mobile menu toggle
-        const hamburger = document.querySelector('.hamburger');
+        const hamburger = document.getElementById('hamburger');
         const navMenu = document.querySelector('.nav-menu');
 
         hamburger.addEventListener('click', () => {
             navMenu.classList.toggle('active');
             hamburger.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
 
-        // Smooth scrolling for navigation links
+        // Close mobile menu on link click
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                hamburger.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Smooth scrolling for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    navMenu.classList.remove('active');
+                    const offsetTop = target.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
@@ -1021,10 +2751,10 @@
                         setTimeout(() => {
                             item.style.opacity = '1';
                             item.style.transform = 'scale(1)';
-                        }, 100);
+                        }, 10);
                     } else {
                         item.style.opacity = '0';
-                        item.style.transform = 'scale(0.8)';
+                        item.style.transform = 'scale(0.95)';
                         setTimeout(() => {
                             item.style.display = 'none';
                         }, 300);
@@ -1033,53 +2763,135 @@
             });
         });
 
-        // Fade in animation on scroll
+        // FAQ Accordion
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            
+            question.addEventListener('click', () => {
+                const isActive = item.classList.contains('active');
+                
+                // Close all items in the same column
+                const column = item.closest('.faq-column');
+                column.querySelectorAll('.faq-item').forEach(faqItem => {
+                    faqItem.classList.remove('active');
+                });
+                
+                // Open clicked item if it wasn't active
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // Intersection Observer for animations
         const observerOptions = {
             threshold: 0.1,
-            rootMargin: '0px 0px -100px 0px'
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    
+                    // Animate stat numbers
+                    if (entry.target.classList.contains('stat-item')) {
+                        const statNumber = entry.target.querySelector('.stat-number');
+                        const targetNumber = parseInt(statNumber.textContent);
+                        animateNumber(statNumber, targetNumber);
+                    }
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in').forEach(el => {
+        // Observe all animated elements
+        document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .stat-item').forEach(el => {
             observer.observe(el);
         });
+
+        // Number animation
+        function animateNumber(element, target) {
+            const duration = 2000;
+            const start = 0;
+            const increment = target / (duration / 16);
+            let current = start;
+
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                element.innerHTML = Math.floor(current) + element.innerHTML.match(/<span>.*<\/span>/)?.[0] || '';
+            }, 16);
+        }
 
         // Form submission
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             
+            // Get form data
+            const formData = new FormData(e.target);
+            const data = Object.fromEntries(formData);
+            
+            // Validate form
+            if (!data.name || !data.email || !data.phone || !data['event-date'] || !data['event-type']) {
+                alert('Proszę wypełnić wszystkie wymagane pola!');
+                return;
+            }
+            
             // Show success message
             const btn = e.target.querySelector('.submit-btn');
-            const originalText = btn.textContent;
-            btn.textContent = 'Wysłano! ✓';
-            btn.style.background = 'linear-gradient(135deg, #00ff00, #00ffff)';
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>Wysłano! ✓</span>';
+            btn.style.background = 'linear-gradient(135deg, #4CAF50, #45a049)';
             
-            // Reset form
+            // Reset form after delay
             setTimeout(() => {
                 e.target.reset();
-                btn.textContent = originalText;
+                btn.innerHTML = originalText;
                 btn.style.background = '';
             }, 3000);
+            
+            console.log('Form data:', data);
         });
 
-        // Add dynamic hover effects
-        document.querySelectorAll('.service-card, .portfolio-item, .testimonial-card').forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                card.style.setProperty('--mouse-x', `${x}px`);
-                card.style.setProperty('--mouse-y', `${y}px`);
+        // Newsletter form
+        document.querySelector('.newsletter-form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const email = e.target.querySelector('input').value;
+            if (email) {
+                alert('Dziękujemy za zapisanie się do newslettera!');
+                e.target.reset();
+            }
+        });
+
+        // Set minimum date for event date input
+        const eventDateInput = document.getElementById('event-date');
+        const today = new Date().toISOString().split('T')[0];
+        eventDateInput.setAttribute('min', today);
+
+        // Lazy loading for images
+        const images = document.querySelectorAll('img');
+        const imageOptions = {
+            threshold: 0,
+            rootMargin: '50px'
+        };
+
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.src;
+                    img.classList.add('loaded');
+                    imageObserver.unobserve(img);
+                }
             });
-        });
-    </script>
+        }, imageOptions);
 
-</body></html>
+        images.forEach(img => imageObserver.observe(img));
+    </script>
+</body>
+</html>
