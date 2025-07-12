@@ -56,12 +56,6 @@
     </script>
     
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         :root {
             --primary-gold: #FFD700;
             --secondary-gold: #FFA500;
@@ -281,17 +275,15 @@
             transform: rotate(-45deg) translate(8px, -8px);
         }
 
-         /* Hero Section */
+        /* Hero Section */
         .hero {
             min-height: 100vh;
-            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
             overflow: hidden;
-            padding: 0 1rem;
         }
 
         .hero-pattern {
@@ -315,8 +307,7 @@
             text-align: center;
             z-index: 1;
             padding: 2rem;
-            width: 100%;
-            max-width: 1200px;
+            max-width: 1000px;
         }
 
         .hero-badge {
@@ -349,7 +340,7 @@
         .hero-description {
             font-size: 1.1rem;
             color: var(--text-secondary);
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto 3rem;
             line-height: 1.8;
             animation: fadeInUp 1s ease-out 0.6s both;
@@ -441,7 +432,7 @@
         }
 
         .stats-container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -493,14 +484,13 @@
         }
 
         .container {
-            width: 100%;
-            padding: 0 1rem;
+            max-width: 1200px;
+            margin: 0 auto;
         }
 
         .section-header {
             text-align: center;
             margin-bottom: 4rem;
-            padding: 0 1rem;
         }
 
         .section-badge {
@@ -526,7 +516,7 @@
         .section-subtitle {
             font-size: 1.2rem;
             color: var(--text-secondary);
-            max-width: 900px;
+            max-width: 700px;
             margin: 0 auto;
             line-height: 1.8;
         }
@@ -536,8 +526,6 @@
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
             align-items: center;
-            padding: 0 1rem;
-            width: 100%;
         }
 
         .about-text h3 {
@@ -623,7 +611,7 @@
 
         /* Services Section */
         .services-section {
-            padding: 4rem 0;
+            padding: 6rem 2rem;
             background: var(--dark-gray);
         }
 
@@ -631,7 +619,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
-            margin-top: 1rem;
+            margin-top: 4rem;
         }
 
         .service-card {
@@ -720,7 +708,7 @@
 
         /* Music Genres Section */
         .genres-section {
-            padding: 6rem 0;
+            padding: 6rem 2rem;
             background: var(--black);
         }
 
@@ -733,7 +721,7 @@
 
         .genre-card {
             background: var(--dark-gray);
-            padding: 1rem;
+            padding: 2rem 1rem;
             border-radius: var(--border-radius);
             text-align: center;
             transition: var(--transition-fast);
@@ -771,15 +759,15 @@
 
         /* Gallery Section */
         .gallery-section {
-            padding: 4rem 0;
+            padding: 6rem 2rem;
             background: var(--dark-gray);
         }
 
         .gallery-filters {
             display: flex;
             justify-content: center;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
+            gap: 1rem;
+            margin-bottom: 3rem;
             flex-wrap: wrap;
         }
 
@@ -803,7 +791,7 @@
 
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
             gap: 2rem;
         }
 
@@ -811,7 +799,7 @@
             position: relative;
             overflow: hidden;
             border-radius: var(--border-radius);
-            height: 350px;
+            height: 300px;
             cursor: pointer;
             transition: var(--transition-fast);
             box-shadow: 0 5px 20px var(--shadow-dark);
@@ -856,14 +844,14 @@
 
         /* Testimonials */
         .testimonials-section {
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
             background: var(--black);
             position: relative;
             overflow: hidden;
         }
 
         .testimonials-slider {
-            max-width: 1400px;
+            max-width: 1000px;
             margin: 0 auto;
             position: relative;
         }
@@ -916,14 +904,15 @@
 
         /* Equipment */
         .equipment-section {
-            padding: 3rem 1.5rem;
+            padding: 6rem 2rem;
             background: var(--dark-gray);
         }
 
         .equipment-showcase {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 3rem;
+            margin-top: 4rem;
         }
 
         .equipment-card {
@@ -940,7 +929,7 @@
         }
 
         .equipment-image {
-            height: 215px;
+            height: 200px;
             overflow: hidden;
         }
 
@@ -984,13 +973,14 @@
 
         /* FAQ Section */
         .faq-section {
-            padding: 4rem 2rem;
+            padding: 6rem 2rem;
             background: var(--black);
         }
 
         .faq-container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
+            margin-top: 3rem;
         }
 
         .faq-item {
@@ -1057,7 +1047,7 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             margin-top: 4rem;
         }
@@ -1209,7 +1199,7 @@
         }
 
         .footer-content {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1289,121 +1279,8 @@
             box-shadow: 0 10px 30px var(--shadow-medium);
         }
 
-
         /* Responsive Design */
-        @media (min-width: 1600px) {
-            .nav-container {
-                padding: 1rem 6rem;
-            }
-            
-            .container,
-            .stats-container,
-            .services-grid,
-            .genres-container,
-            .gallery-filters,
-            .gallery-grid,
-            .equipment-showcase,
-            .contact-container,
-            .footer-content,
-            .about-content {
-                padding: 0 6rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-                gap: 3rem;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-                gap: 3rem;
-            }
-            
-            .hero h1 {
-                font-size: 6rem;
-            }
-            
-            .section-title {
-                font-size: 4rem;
-            }
-        }
-
-        @media (min-width: 1920px) {
-            .nav-container {
-                padding: 1rem 8rem;
-            }
-            
-            .container,
-            .stats-container,
-            .services-grid,
-            .genres-container,
-            .gallery-filters,
-            .gallery-grid,
-            .equipment-showcase,
-            .contact-container,
-            .footer-content,
-            .about-content {
-                padding: 0 8rem;
-            }
-            
-            .about-content {
-                gap: 6rem;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(4, 1fr);
-            }
-        }
-        
-        @media (min-width: 2560px) {
-            .nav-container {
-                padding: 1rem 10rem;
-            }
-            
-            .container,
-            .stats-container,
-            .services-grid,
-            .genres-container,
-            .gallery-filters,
-            .gallery-grid,
-            .equipment-showcase,
-            .contact-container,
-            .footer-content,
-            .about-content {
-                padding: 0 10rem;
-            }
-            
-            .hero-content {
-                max-width: 1600px;
-            }
-            
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-                max-width: 2200px;
-                margin: 4rem auto 0;
-            }
-            
-            .gallery-grid {
-                grid-template-columns: repeat(5, 1fr);
-                max-width: 2400px;
-                margin: 0 auto;
-            }
-        }
-
         @media (max-width: 1024px) {
-            .nav-container,
-            .container,
-            .stats-container,
-            .services-grid,
-            .genres-container,
-            .gallery-filters,
-            .gallery-grid,
-            .equipment-showcase,
-            .contact-container,
-            .footer-content {
-                padding: 0 2rem;
-            }
-            
             .about-content,
             .contact-container {
                 grid-template-columns: 1fr;
@@ -1419,27 +1296,6 @@
         }
 
         @media (max-width: 768px) {
-            .nav-container,
-            .container,
-            .stats-container,
-            .services-grid,
-            .genres-container,
-            .gallery-filters,
-            .gallery-grid,
-            .equipment-showcase,
-            .contact-container,
-            .footer-content,
-            .section-header,
-            .about-content,
-            .faq-container,
-            .testimonials-slider {
-                padding: 0 1.5rem;
-            }
-            
-            .hero {
-                padding: 0 1.5rem;
-            }
-            
             .nav-menu {
                 position: fixed;
                 left: -100%;
@@ -1514,30 +1370,9 @@
             .social-links {
                 flex-wrap: wrap;
             }
-            
-            section {
-                padding: 4rem 0;
-            }
         }
 
         @media (max-width: 480px) {
-            .nav-container,
-            .container,
-            .stats-container,
-            .services-grid,
-            .genres-container,
-            .gallery-filters,
-            .gallery-grid,
-            .equipment-showcase,
-            .contact-container,
-            .footer-content,
-            .section-header,
-            .about-content,
-            .faq-container,
-            .testimonials-slider {
-                padding: 0 1rem;
-            }
-            
             .hero {
                 padding: 100px 1rem 2rem;
             }
@@ -1547,7 +1382,7 @@
             }
 
             section {
-                padding: 3rem 0;
+                padding: 4rem 1rem;
             }
 
             .contact-form {
@@ -1739,7 +1574,7 @@
                     </div>
                 </div>
                 <div class="about-image slide-in-right">
-                    <img src="https://scontent.fpoz4-1.fna.fbcdn.net/v/t39.30808-6/471172723_9008852312528708_8842855674266346411_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=Z_15IO0KzH8Q7kNvwFARfwq&_nc_oc=AdnTUHVjXHxG61IjFsXwqQA0FomzpmbFD75XwAbhAyhRWsMyIvjeRagZyqzWqxD_IUA&_nc_zt=23&_nc_ht=scontent.fpoz4-1.fna&_nc_gid=joAdMHIW_L1NBNt3F8_F5g&oh=00_AfRP8agKK_1iljRezShY5BB5qh_jhDYDLEWcD4luz7l4Gg&oe=6875122E" alt="DJ Ramzes przy konsolecie" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1571266028243-e4733b0f0bb0?w=600&h=600&fit=crop" alt="DJ Ramzes przy konsolecie" loading="lazy">
                 </div>
             </div>
         </div>
